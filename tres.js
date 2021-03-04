@@ -17,17 +17,22 @@ var edad
 var temperatura
 var Sexo
 var precioBase = 600
+var totalViaje
+var precioFinalDescuento
 
 
 var contadorNombres=0
 var contadorSolteros=0
 var contadorViudos=0
 var contadorCasados=0
+var contadorEdadAvanzada=0
 
-do { nombre=prompt("Ingrese su nombre"))
+do { nombre=prompt("Ingrese su nombre"));
+
   if (nombre!="") {
 
     contadorNombres++}
+
   
 } while (nombre);
 
@@ -49,11 +54,23 @@ do { estadoCivil=prompt("Ingrese su estado civil")
 
 do {
 	 
-	edad=(prompt(parseInt("Ingrese su edad"))
-	
-  if(edad>60 && estadoCivil==Viudo){
+	edad=(prompt(parseInt("Ingrese su edad")))
+
+  if (edad>60 && estadoCivil==Viudo) {
 	  contadorViudos++
   }
+  else (edad>60) {
+	  contadorEdadAvanzada++
+  }
+
+
+  if (contadorEdadAvanzada == contadorNombres%2){
+
+	totalViaje*0.025
+  }
+
+
+  
 
 } while (edad>17);
 
@@ -63,10 +80,13 @@ do {
 
 //b) el nombre y edad de la mujer soltera mas joven.
 
+
 //c) cuanto sale el viaje total sin descuento.
 
-//d) 
+totalViaje=precioBase*contadorNombres
 
+//d) 
+precioFinalDescuento = totalViaje*0.025
 
 
 
